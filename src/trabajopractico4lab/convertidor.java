@@ -18,6 +18,7 @@ public class convertidor extends javax.swing.JFrame {
      */
     public convertidor() {
         initComponents();
+        
     }
 
     /**
@@ -37,6 +38,7 @@ public class convertidor extends javax.swing.JFrame {
         mostrarTemperatura = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Ejercicio 2 - Convertidor");
 
         jLabel1.setText(" ");
 
@@ -107,6 +109,7 @@ public class convertidor extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jIngresarTemperaturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jIngresarTemperaturaActionPerformed
@@ -119,6 +122,8 @@ public class convertidor extends javax.swing.JFrame {
            mostrarTemperatura.setText("Temperatura en grados Fahrenheit : " + (tempActual * (1.8)+32) + " grados fahrenheit"); 
         }catch(NumberFormatException NFE){
             JOptionPane.showMessageDialog(this,"Error... usted no ingresó un numero");
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(this,"Error");
         }
     }//GEN-LAST:event_jbotonActionPerformed
 
